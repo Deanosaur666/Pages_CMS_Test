@@ -12,7 +12,7 @@ content:
   - name: tomls
     label: TOMLS
     type: collection
-    path: docs
+    path: docs/tomls
     fields:
       - name: title
         type: string
