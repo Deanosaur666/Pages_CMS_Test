@@ -1,25 +1,18 @@
+<!DOCTYPE html>
+<html>
 <head>
-    <title>Deanosaur</title>
-    <link rel="shortcut icon" href="Dog.png" />
-    <link href="style.css" rel="stylesheet" type="text/css" media="all">
+    <script src="https://unpkg.com/graphology@0.25.4/dist/graphology.umd.min.js"></script>
+    <script src="https://unpkg.com/sigma@3.0.0-beta.6/dist/sigma.umd.min.js"></script>
 </head>
+<body>
+    <div id="container" style="width: 800px; height: 600px;"></div>
+    <script>
+        const graph = new Graph();
+        graph.addNode("1", {label:"Node 1", x: 0, y: 0, size: 10, color: "blue"});
+        graph.addNode("2", {label:"Node 2", x: 1, y: 1, size: 20, color: "red"});
+        graph.addEdge("1", "2", {size: 5, color: "purple"});
 
-<body style="margin:20;padding:20">
-<div align="center">
-
-<h1>Deanosaur's Website</h1>
-
-<h2>Stuff on itch.io</h2>
-
-<iframe frameborder="0" src="https://itch.io/embed/3905596?border_width=5&amp;bg_color=000000&amp;fg_color=ffffff&amp;link_color=ffffff&amp;border_color=ffffff" width="560" height="175"><a href="https://deanosaur666.itch.io/woodchipper-comic">Woodchipper Comic by Dean</a></iframe>
-
- <iframe frameborder="0" src="https://itch.io/embed/3454165?border_width=5&amp;bg_color=000000&amp;fg_color=ffffff&amp;link_color=ffffff&amp;border_color=ffffff" width="560" height="175"><a href="https://deanosaur666.itch.io/the-island-of-doghouses">The Island of Doghouses - A Thriller Novelette by Dean</a></iframe>
- 
- <iframe frameborder="0" src="https://itch.io/embed/3909981?border_width=5&amp;bg_color=000000&amp;fg_color=ffffff&amp;link_color=ffffff&amp;border_color=ffffff" width="560" height="175"><a href="https://deanosaur666.itch.io/handheld-raygun-mini">Handheld Raygun - Mini Zine by Dean</a></iframe>
- 
- <iframe frameborder="0" src="https://itch.io/embed/3454144?border_width=5&amp;bg_color=000000&amp;fg_color=ffffff&amp;link_color=ffffff" width="560" height="175"><a href="https://deanosaur666.itch.io/bright-lights">Bright Lights - Art Zine by Dean</a></iframe>
- 
- <iframe frameborder="0" src="https://itch.io/embed/1440421?border_width=5&amp;bg_color=000000&amp;fg_color=ffffff&amp;link_color=ffffff&amp;border_color=ffffff" width="560" height="175"><a href="https://dean-and-jim.itch.io/gray-mansion">Gray Mansion by Dean and Jim, Dean</a></iframe>
- 
- <iframe frameborder="0" src="https://itch.io/embed/1326727?border_width=5&amp;bg_color=000000&amp;fg_color=ffffff&amp;link_color=ffffff&amp;border_color=ffffff" width="560" height="175"><a href="https://dean-and-jim.itch.io/sr3001-alpha">SR3001 Alpha (abandoned) by Dean and Jim, Dean</a></iframe>
-</div>
+        const sigmaInstance = new Sigma(graph, document.getElementById("container"));
+    </script>
+</body>
+</html>
